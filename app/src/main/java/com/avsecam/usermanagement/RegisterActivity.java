@@ -23,13 +23,11 @@ public class RegisterActivity extends AppCompatActivity {
     @ViewById(R.id.editTextConfirmPassword) EditText confirmPasswordField;
 
     private SharedPreferences sharedPreferences;
-    private SharedPreferences.Editor editor;
     private Realm realm;
 
     @AfterViews
     protected void init() {
         sharedPreferences = getSharedPreferences(getString(R.string.SHAREDPREFERENCES_NAME), MODE_PRIVATE);
-        editor = sharedPreferences.edit();
         realm = Realm.getDefaultInstance();
     }
 

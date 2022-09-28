@@ -64,9 +64,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     @Click(R.id.buttonAdmin)
-    public void onRegisterButtonPressed() {
-        Intent goToRegister = new Intent(this, RegisterActivity_.class);
-        startActivity(goToRegister);
+    public void onAdminButtonPressed() {
+        Intent goToAdmin = new Intent(this, AdminActivity_.class);
+        startActivity(goToAdmin);
     }
 
     @Click(R.id.buttonClear)

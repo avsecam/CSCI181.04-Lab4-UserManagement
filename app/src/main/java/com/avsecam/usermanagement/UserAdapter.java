@@ -20,11 +20,11 @@ public class UserAdapter extends RealmRecyclerViewAdapter<User, UserAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView usernameLabel;
-        TextView passwordLabel;
+        private TextView usernameLabel;
+        private TextView passwordLabel;
 
-        ImageButton editButton;
-        ImageButton deleteButton;
+        private ImageButton editButton;
+        private ImageButton deleteButton;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
