@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    @Click(R.id.buttonRegister)
+    @Click(R.id.buttonAdmin)
     public void onRegisterButtonPressed() {
         Intent goToRegister = new Intent(this, RegisterActivity_.class);
         startActivity(goToRegister);
