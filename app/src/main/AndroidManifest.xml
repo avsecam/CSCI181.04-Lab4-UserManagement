@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Realm"
         tools:targetApi="31">
         <activity
+            android:name=".EditActivity_"
+            android:exported="false" />
+        <activity
             android:name=".AdminActivity_"
             android:exported="false" />
         <activity

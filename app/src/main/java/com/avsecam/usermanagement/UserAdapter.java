@@ -62,8 +62,10 @@ public class UserAdapter extends RealmRecyclerViewAdapter<User, UserAdapter.View
         holder.passwordLabel.setText(user.getPassword());
 
         holder.editButton.setOnClickListener(event -> {
-            Intent goToRegister = new Intent(adminActivity, RegisterActivity_.class);
-            adminActivity.startActivity(goToRegister);
+            Intent goToEdit = new Intent(adminActivity, EditActivity_.class);
+            goToEdit.putExtra(adminActivity.getString(R.string.USERNAME_KEY), holder.usernameLabel.getText());
+            goToEdit.putExtra(adminActivity.getString(R.string.PASSWORD_KEY), holder.passwordLabel.getText());
+            adminActivity.startActivity(goToEdit);
         });
 
         holder.deleteButton.setOnClickListener(event -> {
