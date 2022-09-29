@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -50,5 +51,6 @@ public class AdminActivity extends AppCompatActivity {
              .findAll()
              .deleteAllFromRealm()
         );
+        Toast.makeText(this, "All users deleted.", Toast.LENGTH_SHORT).show();
     }
 }

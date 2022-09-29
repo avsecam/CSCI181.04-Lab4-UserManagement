@@ -1,6 +1,7 @@
 package com.avsecam.usermanagement;
 
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -52,8 +53,8 @@ public class EditActivity extends AppCompatActivity {
         boolean userExists = realm.where(User.class).equalTo("name", username).findFirst() != null;
         if (userExists) {
             // Check if the existing user is the user being edited
-            boolean existingUserIsTheSame = realm.where(User.class).equalTo("name", username).findFirst() == userToBeEdited;
-            if (existingUserIsTheSame) {
+            boolean existingUserIsTheSame = realm.where(User.class).equalTo("name", username).findFirst().getName().equals(userToBeEdited.getName());
+            if (!existingUserIsTheSame) {
                 Toast.makeText(this, "User already exists.", Toast.LENGTH_SHORT).show();
                 return;
             }
